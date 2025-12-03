@@ -25,9 +25,6 @@ def get_first_and_last_char(s: str) -> str:
     """
     # TODO: Напишите ваш код здесь
 
-    if not s:
-        return ""
-
     return s[0] + s[-1]
 
 def get_middle_chars(s: str) -> str:
@@ -37,9 +34,6 @@ def get_middle_chars(s: str) -> str:
     """
     # TODO: Напишите ваш код здесь
     
-    if len(s) <= 2:
-        return ""
-
     return s[1:-1]
 
 def reverse_string(s: str) -> str:
@@ -48,7 +42,7 @@ def reverse_string(s: str) -> str:
     Пример: "hello" -> "olleh"
     """
     # TODO: Напишите ваш код здесь
-    ...
+    
     return s[::-1]
 
 def is_palindrome(s: str) -> bool:
@@ -59,7 +53,7 @@ def is_palindrome(s: str) -> bool:
     Пример: "racecar" -> True, "hello" -> False
     """
     # TODO: Напишите ваш код здесь
-    ...
+
     return s == s[::-1]
 
 def count_vowels(s: str) -> int:
@@ -70,20 +64,9 @@ def count_vowels(s: str) -> int:
     """
     # TODO: Напишите ваш код здесь
     
-    # Первый вариант
-    vowels = "aeiouAEIOU"
-    count = 0
-    for char in s:
-        if char in vowels:
-            count += 1
+    vowels = "aeiou"
 
-    return count
-
-    # Второй вариант
-    # vowels = "aeiou"
-    # s_lower = s.lower()
-
-    # return sum(1 for char in s_lower if char in vowels)
+    return sum(1 for char in s.lower() if char in vowels)
 
 def remove_spaces(s: str) -> str:
     """
@@ -91,7 +74,7 @@ def remove_spaces(s: str) -> str:
     Пример: "hello world" -> "helloworld"
     """
     # TODO: Напишите ваш код здесь
-    ...
+    
     return s.replace(" ", "")
 
 def capitalize_words(s: str) -> str:
@@ -100,5 +83,5 @@ def capitalize_words(s: str) -> str:
     Пример: "hello world" -> "Hello World"
     """
     # TODO: Напишите ваш код здесь
-    ...
+    
     return s.title()
